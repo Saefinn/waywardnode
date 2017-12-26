@@ -4,6 +4,8 @@ const hbs = require('hbs');
 
 var app = express();
 
+var port = process.env.PORT || 8080;
+
 hbs.registerPartials(__dirname + '/views/partials');
 
 app.set('view engine', 'hbs');
@@ -58,6 +60,6 @@ app.get('/bad', (req,res)=> {
 });
 
 
-app.listen(3000, () => {
-    console.log("Server is listening to port 3000, because it's a nosey bastard. It knows what dodgy sites you like and it thinks you're a dirty whore, but that's okay, it likes it.");
+app.listen(port, () => {
+    console.log("Server is listening to " + port + ", because it's a nosey bastard. It knows what dodgy sites you like and it thinks you're a dirty whore, but that's okay, it likes it.");
 });
