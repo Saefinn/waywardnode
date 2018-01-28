@@ -5,6 +5,7 @@ const hbs = require('hbs');
 var app = express();
 
 var port = process.env.PORT || 8080;
+//var port = 3000;
 
 hbs.registerPartials(__dirname + '/views/partials');
 
@@ -44,9 +45,9 @@ app.get('/guilded', (req,res) =>{
 });
 
 
-app.get('/about', (req,res) => {
-   res.render('about.hbs', {
-       pageTitle: 'About Page',
+app.get('/contracts', (req,res) => {
+   res.render('contracts.hbs', {
+       pageTitle: 'Contracts',
        currentYear: new Date().getFullYear()
    });
 });
