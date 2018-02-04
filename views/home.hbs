@@ -14,7 +14,16 @@
                         <div class="alert alert-primary" role="alert">
                             Website is in progress.
                         </div>
-                        <p>Helloooo</p>
+                        <p>This will eventually replace our site here: <a href="http://piratesofawaywardstar.herokuapp.com/">http://piratesofawaywardstar.herokuapp.com/</a></p>
+                        <p>Saefinn will be including the features we previously had and more, once he has time to work on this. Please refer to our Guilded site and our old site if what you're looking for isn't here.</p>
+                        
+                        <h3>Why the Website Change?</h3>
+                        
+                        <p>The old site linked above was coded using <a href="http://rubyonrails.org/">RubyOnRails</a> on its backend. Saefinn tried to clean up the site and prettified it up and fix some of the issues with it, but decided that whilst RubyOnRails is a fantastic toolkit, he wasn't prepared to fully learn Ruby, because he's used to C-type languages like C# and JavaScript and Ruby is quite different, hell people in the RPG Maker community used to complain about their choice with Ruby for scripting. But they now use JavaScript instead. But then JavaScript has seriously come a long way in the last decade.</p>
+                        
+                        <p>What is the solution? Redo the whole thing in something that caters to that pre-existing programming knowledge. On the backend we're currently running <a href="https://nodejs.org/en/">Nodejs</a> through a framework called <a href="https://expressjs.com/">Express</a>. The benefit is that these suit Saefinn's coding style better. There will also be integration of a JavaScript framework on the frontend called <a href="https://angularjs.org/">AngularJS</a>. This will make a <a href="http://mean.io/">MEAN stack</a>, and if we swap out CSS to SASS for the styling, Captain Prick will be both MEAN and SASSy.</p>
+                        
+                        <p>Also the website performs a lot better out of the box using Nodejs and Express. Which is good, because we're using a free host and we only have a single thread.</p>
                     </div>
 
                     <div class=col-sm"">
@@ -29,6 +38,14 @@
         </div>
         
         {{> footer}}
+        
+        <script>firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});</script>
+        
     </body>
     
 </html>

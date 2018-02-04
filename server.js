@@ -4,8 +4,8 @@ const hbs = require('hbs');
 
 var app = express();
 
-var port = process.env.PORT || 8080;
-//var port = 3000;
+//var port = process.env.PORT || 8080;
+var port = 3000;
 
 hbs.registerPartials(__dirname + '/views/partials');
 
@@ -64,3 +64,7 @@ app.get('/bad', (req,res)=> {
 app.listen(port, () => {
     console.log("Server is listening to " + port + ", because it's a nosey bastard. It knows what dodgy sites you like and it thinks you're a dirty whore, but that's okay, it likes it.");
 });
+
+
+
+
